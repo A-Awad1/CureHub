@@ -1,0 +1,13 @@
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hidden-part {
+  display: none;
+}

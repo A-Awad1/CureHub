@@ -1,0 +1,200 @@
+aside {
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 20px 0 25px;
+  width: 50px;
+  @media (min-width: 576px) {
+    padding: 22px 0 28px;
+    width: 55px;
+  }
+  @media (min-width: 768px) {
+    width: 190px;
+  }
+  @media (min-width: 992px) {
+    padding: 24px 0 28px;
+    width: 200px;
+  }
+  @media (min-width: 1200px) {
+    padding: 26px 0 30px;
+    width: 210px;
+  }
+  @media (min-width: 1400px) and (min-height: 800px) {
+    padding: 40px 0 96px;
+    width: 272px;
+  }
+  > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    @media (min-width: 1400px) and (min-height: 800px) {
+      gap: 28px;
+    }
+    > li {
+      display: flex;
+      > a {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: center;
+        padding: 8px 2px;
+        transition: background-color var(--main-transition);
+        @media (max-width: 767.5px) {
+          &:hover > span {
+            transform: scale(1) translateX(4px);
+            transition: transform var(--main-transition);
+          }
+        }
+        @media (min-width: 576px) {
+          padding: 10px 3px;
+        }
+        @media (min-width: 768px) {
+          justify-content: flex-start;
+          padding: 10px 11px;
+          gap: 8px;
+        }
+        @media (min-width: 992px) {
+          padding: 11px 18px;
+          gap: 10px;
+        }
+        @media (min-width: 1200px) {
+          padding: 12px 25px;
+          gap: 11px;
+        }
+        @media (min-width: 1400px) and (min-height: 800px) {
+          padding: 17px 40px;
+          gap: 16px;
+        }
+        img {
+          width: 24px;
+        }
+        span {
+          text-transform: capitalize;
+          @media (min-width: 768px) {
+            color: var(--second-text-color);
+            font-weight: 500;
+            font-size: 15px;
+          }
+          @media (min-width: 992px) {
+            font-size: 16px;
+          }
+          @media (min-width: 1400px) and (min-height: 800px) {
+            font-size: 18px;
+          }
+        }
+        &:hover {
+          background-color: #0de3f41a;
+        }
+        &.active {
+          background-color: #0de3f41a;
+          @media (min-width: 768px) {
+            border-right: 4px solid var(--identity-color);
+          }
+          span {
+            @media (min-width: 768px) {
+              color: var(--identity-color);
+              font-size: 16px;
+              font-weight: 600;
+            }
+            @media (min-width: 992px) {
+              font-size: 17px;
+            }
+            @media (min-width: 1200px) {
+              font-weight: 700;
+            }
+            @media (min-width: 1400px) and (min-height: 800px) {
+              font-weight: 800;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.mode {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 4px;
+    border-radius: var(--main-border-radius);
+    background-color: var(--second-bg-color);
+    flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+    button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      outline: none;
+      border-radius: var(--main-border-radius);
+      position: relative;
+      padding: 5px;
+      @media (max-width: 767.5px) {
+        &:hover > span {
+          transform: scale(1) translateX(8px);
+          transition: transform var(--main-transition);
+        }
+      }
+      @media (min-width: 768px) {
+        padding: 6px;
+        gap: 3px;
+      }
+      @media (min-width: 1400px) and (min-height: 800px) {
+        gap: 4px;
+        padding: 8px 11px 8px 16px;
+      }
+      > img {
+        width: 24px;
+      }
+      > span {
+        text-transform: capitalize;
+        font-size: 14px;
+        @media (min-width: 992px) {
+          font-size: 15px;
+        }
+        @media (min-width: 1400px) and (min-height: 800px) {
+          font-size: 16px;
+        }
+      }
+      &.light {
+        color: var(--black-color);
+        background-color: var(--white-color);
+      }
+      &.dark {
+        color: var(--second-text-color);
+        background-color: transparent;
+      }
+    }
+  }
+}
+/* global span */
+aside span {
+  @media (max-width: 767.5px) {
+    position: absolute;
+    background-color: var(--identity-color);
+    color: var(--white-color);
+    border-radius: var(--second-border-radius);
+    padding: 6px;
+    transform: scale(0);
+    transform-origin: top left;
+    left: 100%;
+    font-size: 14px;
+    &::before {
+      content: "";
+      position: absolute;
+      border: 6px solid transparent;
+      border-right-color: var(--identity-color);
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+:root {
+  /* colors */
+  --identity-color: #00a8b5;
+  --white-color: #fff;
+  --black-color: #000;
+  --main-text-color: #212529;
+  --second-text-color: #999a9d;
+  --main-bg-color: #f7f7f7;
+  --second-bg-color: #f6f8fa;
+  --main-border-color: #ededed;
+  --second-border-color: #e0e0e0;
+  /* Fonts */
+  --main-font: "Roboto", sans-serif;
+  --second-font: "Poppins", sans-serif;
+  /* global */
+  --main-border-radius: 8px;
+  --second-border-radius: 4px;
+  --main-transition: 0.3s;
+}

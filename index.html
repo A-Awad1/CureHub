@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="this is a medical solution" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="assets/svg/fav.svg" />
+    <title>CureHub</title>
+    <!-- CSS -->
+    <!-- libraries -->
+    <link rel="stylesheet" href="css/libraries/normalize.css" />
+    <link rel="stylesheet" href="css/libraries/calendar.css" />
+    <!-- base -->
+    <link rel="stylesheet" href="css/base/reset.css" />
+    <link rel="stylesheet" href="css/base/variables.css" />
+    <!-- components -->
+    <link rel="stylesheet" href="css/components/global.css" />
+    <!-- layout -->
+    <link rel="stylesheet" href="css/layout/scroll-bar.css" />
+    <link rel="stylesheet" href="css/layout/main.css" />
+    <link rel="stylesheet" href="css/layout/header.css" />
+    <link rel="stylesheet" href="css/layout/sidebar.css" />
+    <!-- current page -->
+    <link rel="stylesheet" href="css/pages/dashboard.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="heading">
+          <img src="assets/svg/fav.svg" alt="log image" />
+          <h1>
+            <span>Cure</span>
+            <span>Hub</span>
+          </h1>
+        </div>
+        <div class="controls">
+          <div class="search">
+            <button class="btn-icon btn-search">
+              <img src="assets/svg/search.svg" alt="search icon" />
+            </button>
+            <input type="text" placeholder="Search here...." />
+          </div>
+          <div class="user">
+            <div>
+              <button class="btn-icon">
+                <img src="assets/svg/email.svg" alt="email icon" />
+              </button>
+              <button class="btn-icon">
+                <img src="assets/svg/bell.svg" alt="bell icon" />
+              </button>
+            </div>
+            <div>
+              <div class="img-container">
+                <img src="assets/images/user.jpg" alt="user image" />
+              </div>
+              <div class="info">
+                <span class="name">dr. oliver widson</span>
+                <span class="job">manager</span>
+              </div>
+              <button class="btn-icon">
+                <img src="assets/svg/downArrow.svg" alt="down arrow icon" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <aside>
+          <ul>
+            <li>
+              <a href="/" class="active">
+                <img src="assets/svg/dashboard-active.svg" alt="dashboard icon" />
+                <span>dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="appointments.html">
+                <img src="assets/svg/appointments.svg" alt="appointments icon" />
+                <span>appointments</span>
+              </a>
+            </li>
+            <li>
+              <a href="patients.html">
+                <img src="assets/svg/patients.svg" alt="patients icon" />
+                <span>patients</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="assets/svg/settings.svg" alt="settings icon" />
+                <span>settings</span>
+              </a>
+            </li>
+          </ul>
+          <div class="mode">
+            <button class="light">
+              <img src="assets/svg/light.svg" alt="light mode icon" />
+              <span class="hovered-span">light</span>
+            </button>
+            <button class="dark">
+              <img src="assets/svg/dark.svg" alt="dark mode icon" />
+              <span>dark</span>
+            </button>
+          </div>
+        </aside>
+        <section class="page dashboard">
+          <div class="numbers-summary">
+            <article class="appoints">
+              <img src="assets/svg/dash-heart.svg" alt="heart icon" class="heart" />
+              <img src="assets/svg/total-appoints.svg" alt="appointments icon" />
+              <span>total appointments</span>
+              <div>
+                <span>9,200</span>
+                <div>
+                  <span>Last week</span>
+                  <span class="green">+ 32%</span>
+                  <img src="assets/svg/green-up-arrow.svg" alt="up arrow" />
+                </div>
+              </div>
+            </article>
+            <article>
+              <img src="assets/svg/new-patients.svg" alt="patients icon" />
+              <span>new patients</span>
+              <div>
+                <span>1,200</span>
+                <div>
+                  <span>Last week</span>
+                  <span class="green">+ 20%</span>
+                  <img src="assets/svg/green-up-arrow.svg" alt="up arrow" />
+                </div>
+              </div>
+            </article>
+            <article>
+              <img src="assets/svg/total-doctors.svg" alt="doctor icon" />
+              <span>total doctors</span>
+              <div>
+                <span>300</span>
+                <div>
+                  <span>Last week</span>
+                  <span class="red">+ 12%</span>
+                  <img src="assets/svg/red-down-arrow.svg" alt="down arrow" />
+                </div>
+              </div>
+            </article>
+            <article>
+              <img src="assets/svg/canceled-appoints.svg" alt="appointments icon" />
+              <span>canceled appointments</span>
+              <div>
+                <span>12</span>
+                <div>
+                  <span>Last week</span>
+                  <span class="red">+ 12%</span>
+                  <img src="assets/svg/red-down-arrow.svg" alt="down arrow" />
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="middle-container">
+            <div>
+              <article class="graph-article">
+                <header>
+                  <h3>appointments by gender</h3>
+                  <div>
+                    <span>Women 67%</span>
+                    <span>Men 33%</span>
+                  </div>
+                  <div class="select-container">
+                    <select>
+                      <option value="Weekly">Weekly</option>
+                    </select>
+                    <img src="assets/svg/select-arrow.svg" alt="arrow icon" />
+                  </div>
+                </header>
+                <div class="graph">
+                  <canvas></canvas>
+                </div>
+              </article>
+              <article class="schedule-article">
+                <header>
+                  <h3>doctors schedule</h3>
+                  <span>see more</span>
+                </header>
+                <div class="schedule">
+                  <div id="dash-calendar"></div>
+                  <div class="activity">
+                    <span>activity details</span>
+                    <p>No activities !!</p>
+                    <ul></ul>
+                    <button>
+                      <img src="assets/svg/plus.svg" alt="plus icon" />
+                      <span>add new</span>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <article class="rates-circle">
+              <header>
+                <h3>top patient department</h3>
+                <span>see more</span>
+              </header>
+              <div>
+                <div class="circle">
+                  <canvas></canvas>
+                </div>
+                <img src="assets/svg/person.svg" alt="person image" />
+              </div>
+              <ul>
+                <li class="depart-rate" data-label="general physician">
+                  <div class="icon-container">
+                    <img src="assets/svg/general-physician.svg" alt="general icon" />
+                  </div>
+                  <div class="info">
+                    <span>general physician</span>
+                    <span>35%</span>
+                  </div>
+                  <button class="btn-icon">
+                    <img src="assets/svg/right-arrow.svg" alt="right arrow icon" />
+                  </button>
+                </li>
+                <li class="depart-rate" data-label="ent">
+                  <div class="icon-container">
+                    <img src="assets/svg/ent.svg" alt="ent icon" />
+                  </div>
+                  <div class="info">
+                    <span>ent</span>
+                    <span>15%</span>
+                  </div>
+                  <button class="btn-icon">
+                    <img src="assets/svg/right-arrow.svg" alt="right arrow icon" />
+                  </button>
+                </li>
+                <li class="depart-rate" data-label="orthopedic">
+                  <div class="icon-container">
+                    <img src="assets/svg/orthopedic.svg" alt="orthopedic icon" />
+                  </div>
+                  <div class="info">
+                    <span>orthopedic</span>
+                    <span>10%</span>
+                  </div>
+                  <button class="btn-icon">
+                    <img src="assets/svg/right-arrow.svg" alt="right arrow icon" />
+                  </button>
+                </li>
+                <li class="depart-rate" data-label="dentist">
+                  <div class="icon-container">
+                    <img src="assets/svg/dentist.svg" alt="dentist icon" />
+                  </div>
+                  <div class="info">
+                    <span>dentist</span>
+                    <span>25%</span>
+                  </div>
+                  <button class="btn-icon">
+                    <img src="assets/svg/right-arrow.svg" alt="right arrow icon" />
+                  </button>
+                </li>
+                <li class="depart-rate" data-label="cardiology">
+                  <div class="icon-container">
+                    <img src="assets/svg/cardiology.svg" alt="cardiology icon" />
+                  </div>
+                  <div class="info">
+                    <span>cardiology</span>
+                    <span>5%</span>
+                  </div>
+                  <button class="btn-icon">
+                    <img src="assets/svg/right-arrow.svg" alt="right arrow icon" />
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="js/libraries/chart.js"></script>
+    <script src="js/libraries/calendar.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

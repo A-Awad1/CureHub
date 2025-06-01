@@ -1,0 +1,25 @@
+html,
+body,
+main.app {
+  height: 100%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font);
+  color: var(--main-text-color);
+}
+
+main.app {
+  display: flex;
+  flex-direction: column;
+  > section {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    > section.page {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
