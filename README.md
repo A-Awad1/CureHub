@@ -7,9 +7,12 @@ This project related to **[CodeZone](https://www.codezone-eg.com/)** company
 - This project is built using only HTML & CSS & JavaScript and without using any JavaScript or CSS frameworks.
 
 - libraries used:
+  -- chart.js  
+  -- fullCalendar.js
 
--- chart.js  
--- fullCalendar.js
+## note
+
+- There was a date compatibility issue in the Figma design and I fixed it in development.
 
 ## Deployment Link
 
