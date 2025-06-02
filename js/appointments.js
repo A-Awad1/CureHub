@@ -1,13 +1,23 @@
+function waitForElement(selector, callback) {
+  const el = document.querySelector(selector);
+  if (el) return callback(el);
+  const observer = new MutationObserver(() => {
+    const el = document.querySelector(selector);
+    if (el) {
+      callback(el);
+      observer.disconnect();
+    }
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+}
+
 window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
   if (!["appointments-list", "doctor-schedule"].includes(hash)) return;
 
-  const tryClick = () => {
-    const link = document.querySelector(`.nav-links a[data-section='${hash}']`);
-    link ? link.click() : setTimeout(tryClick, 100);
-  };
-
-  tryClick();
+  waitForElement(`.nav-links a[data-section='${hash}']`, (el) => {
+    el.click();
+  });
 });
 
 async function getData() {
