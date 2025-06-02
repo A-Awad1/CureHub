@@ -1,23 +1,13 @@
-function waitForElement(selector, callback) {
-  const el = document.querySelector(selector);
-  if (el) return callback(el);
-  const observer = new MutationObserver(() => {
-    const el = document.querySelector(selector);
-    if (el) {
-      callback(el);
-      observer.disconnect();
-    }
-  });
-  observer.observe(document.body, { childList: true, subtree: true });
-}
-
 window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
+  console.log(hash);
   if (!["appointments-list", "doctor-schedule"].includes(hash)) return;
-
-  waitForElement(`.nav-links a[data-section='${hash}']`, (el) => {
-    el.click();
-  });
+  const link = document.querySelector(`.nav-links a[data-section='${hash}']`);
+  if (link) {
+    link.click();
+  } else {
+    console.error(`No element found for selector: .nav-links a[data-section='${hash}']`);
+  }
 });
 
 async function getData() {
