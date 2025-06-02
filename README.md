@@ -6,9 +6,7 @@ This project related to **[CodeZone](https://www.codezone-eg.com/)** company
 
 - This project is built using only HTML & CSS & JavaScript and without using any JavaScript or CSS frameworks.
 
-- libraries used:
-  -- chart.js  
-  -- fullCalendar.js
+- libraries used: chart.js - fullCalendar.js
 
 ## note
 

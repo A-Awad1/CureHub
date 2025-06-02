@@ -1,7 +1,13 @@
 window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
   if (!["appointments-list", "doctor-schedule"].includes(hash)) return;
-  document.querySelector(`.nav-links a[data-section='${hash}']`).click();
+
+  const tryClick = () => {
+    const link = document.querySelector(`.nav-links a[data-section='${hash}']`);
+    link ? link.click() : setTimeout(tryClick, 100);
+  };
+
+  tryClick();
 });
 
 async function getData() {
