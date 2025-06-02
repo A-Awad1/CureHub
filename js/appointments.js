@@ -1,6 +1,5 @@
 window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
-  console.log(hash);
   if (!["appointments-list", "doctor-schedule"].includes(hash)) return;
   const link = document.querySelector(`.nav-links a[data-section='${hash}']`);
   if (link) {
