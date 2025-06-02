@@ -2,11 +2,9 @@ window.addEventListener("load", () => {
   const hash = window.location.hash.slice(1);
   if (!["appointments-list", "doctor-schedule"].includes(hash)) return;
   const link = document.querySelector(`.nav-links a[data-section='${hash}']`);
-  if (link) {
-    link.click();
-  } else {
-    console.error(`No element found for selector: .nav-links a[data-section='${hash}']`);
-  }
+  setTimeout(() => {
+    link ? link.click() : console.error(`No element found`);
+  }, 100);
 });
 
 async function getData() {
